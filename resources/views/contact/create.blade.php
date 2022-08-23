@@ -29,17 +29,17 @@
                 <div>
                     <div class="ml-10 mr-10 flex">
                         <div class="container mx-auto ml-10 mr-10">
-                            <div class="ml-40 mt-5 mb-5 text-center w-60 ">
+                            <div class="ml-40 mt-5 mb-5 text-center w-62 ">
                                 <p class="py-7 text-left"><span class="bg-yellow-300 mr-3 rounded-md p-1">必須</span>氏名</p>
                                 <p class="py-6 text-left"><span class="bg-yellow-300 mr-3 rounded-md p-1">必須</span>電話番号</p>
                                 <p class="py-6 text-left"><span class="bg-yellow-300 mr-3 rounded-md p-1">必須</span>見学希望日</p>
                                 <p class="py-7 text-left"><span class="bg-yellow-300 mr-3 rounded-md p-1">必須</span>見学時間</p>
-                                <p class="py-7 text-left">お子さまの年齢</p>
+                                <p class="py-7 text-left"><span class="bg-yellow-300 mr-3 rounded-md p-1">必須</span>お子さまの年齢または<br>その他該当するものを選択してください<br>※複数選択可</p>
                                 <p class="py-6 text-left">ご相談やご質問</p>
                             </div>
                         </div>
                         <div class="container mx-auto ml-0 mr-10">
-                            <div class="ml-0 mt-5 mb-5text-left">
+                            <div class="ml-5 mt-5 mb-5text-left">
                                 <input type="text" name="your_name" class="py-4 pt-5 m-1 mb-3 rounded-md w-60  border-2 border-red-200" placeholder="例）山田　花子">
                                 <br>
                                 <input type="text" name="tel" class="py-4 m-1 mb-3 rounded-md w-60 border-2 border-red-200" placeholder="08011117777">
@@ -59,6 +59,8 @@
                                     <input type="checkbox" name="ages[]" value="3歳" class="m-1 rounded-md border-2 border-red-200">3歳
                                     <input type="checkbox" name="ages[]" value="4歳" class="m-1 rounded-md border-2 border-red-200">4歳
                                     <input type="checkbox" name="ages[]" value="5歳" class="m-1 rounded-md border-2 border-red-200">5歳
+                                    <input type="checkbox" name="ages[]" value="妊娠中" class="m-1 rounded-md border-2 border-red-200">妊娠中
+                                    <input type="checkbox" name="ages[]" value="その他" class="m-1 rounded-md border-2 border-red-200">その他
                                 </div>
                                 <br>
                                 <textarea name="contact" class="py-4 m-1 rounded-md w-60 border-2 border-red-200"></textarea>
