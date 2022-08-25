@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 追記 -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <title>太子堂保育園</title>
 
@@ -36,7 +38,7 @@
                 </div>
             @endif
         <div>
-            <h1>ようこそ</h1>
+            <h1 class="bg-cyan-300">太子堂保育園ホームページ</h1>
             <form method="GET" action="{{ route('contact.create') }}" class="mt-20 mx-px">
                 <div class="text-right">
                     <x-button class="mr-8 bg-cyan-300 hover:bg-cyan-400">見学予約フォームはこちら</x-button>
