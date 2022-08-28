@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\DB;
 //バリデーション読み込み
 use App\Http\Requests\StoreContactForm;
 
+//ペジネーション
+use Illuminate\Pagination\Paginator;
+
 class FormController extends Controller
 {
     /**

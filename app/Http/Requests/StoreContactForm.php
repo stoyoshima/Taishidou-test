@@ -31,7 +31,7 @@ class StoreContactForm extends FormRequest
             'tel' => 'required|string|max:11',
             'date' => 'required',
             'time' => 'required',
-            'ages' =>'array|nullable',
+            'ages' =>'required',
             'contacts' =>'string|nullable',
         ];
     }

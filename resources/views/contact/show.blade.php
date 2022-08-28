@@ -16,8 +16,8 @@
                         </div>
                         <div class="flex-auto w-10">
                             <form metohd="GET" acction="{{ route('contact.show') }}" class="form-inline text-center">
-                                <input class="form-control mr-sm-2" name="search" type="search" placeholder="検索" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0  bg-cyan-300 hover:bg-cyan-400" type="submit">検索する</button>
+                                <input class="form-control mr-sm-2 rounded-md" name="search" type="search" placeholder="検索" aria-label="Search">
+                                <button class="btn btn-outline-success p-2 rounded-md  bg-cyan-200 hover:bg-cyan-400" type="submit">検索する</button>
                             </form>
                         </div>
                     </div>
@@ -51,17 +51,16 @@
                             </tbody>
                         </table>
                     </div>
-               
-                    {{ $contacts->links() }}
-                    
+                    <div class="pt-20 flex">
+                        <div class="mx-auto">
+                            {{ $contacts->links() }}
+                        </div>
+                    </div> 
                     <form method="GET" action="{{ route('contact.index') }}" class="mt-20 mx-px">
                         <div class="text-right">
                             <x-button class="mr-8 bg-cyan-300 hover:bg-cyan-400">戻る</x-button>
                         </div> 
                     </form>
-                       
-                        
-                   
                 </div>
             </div>
         </div>
