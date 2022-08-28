@@ -95,14 +95,27 @@ class FormController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()//
+    public function show(Request $request)//
     {
-        //エロクワントで書く、データをとる
-        // $contact = Form::find($id);
 
-        //
-        $contacts = DB::table('forms')
-        ->get();
+        //検索フォーム
+        $search = $request->input('search');
+
+        $query = DB::table('forms');
+        if($search !== null){
+            $search_split = mb_convert_kana($search,'s');
+            $search_split2 = preg_split('/[\s]+/', $search_split,-1,PREG_SPLIT_NO_EMPTY);
+            foreach($search_split2 as $value){
+                $query->where('your_name','like','%'.$value.'%');
+            }
+        };
+
+        $query->select('id', 'your_name', 'tel', 'date', 'time', 'ages', 'contact', 'created_at');
+        $query->orderBy('created_at', 'asc');
+        $contacts = $query->paginate(20);
+
+        // $contacts = DB::table('forms')
+        // ->paginate(10);
 
         return view('contact/show', compact('contacts'));
     }
