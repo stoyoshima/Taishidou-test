@@ -58,7 +58,7 @@
                     </div> 
                     <form method="GET" action="{{ route('contact.index') }}" class="mt-20 mx-px">
                         <div class="text-right">
-                            <x-button class="mr-8 bg-cyan-300 hover:bg-cyan-400">戻る</x-button>
+                            <x-button class="mr-8 bg-cyan-200 hover:bg-cyan-400">戻る</x-button>
                         </div> 
                     </form>
                 </div>

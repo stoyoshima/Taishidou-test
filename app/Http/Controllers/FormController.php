@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 //バリデーション読み込み
 use App\Http\Requests\StoreContactForm;
 
-//ペジネーション
+//ページネーション
 use Illuminate\Pagination\Paginator;
 
 class FormController extends Controller
@@ -115,7 +115,7 @@ class FormController extends Controller
 
         $query->select('id', 'your_name', 'tel', 'date', 'time', 'ages', 'contact', 'created_at');
         $query->orderBy('created_at', 'asc');
-        $contacts = $query->paginate(20);
+        $contacts = $query->paginate(10);
 
         // $contacts = DB::table('forms')
         // ->paginate(10);

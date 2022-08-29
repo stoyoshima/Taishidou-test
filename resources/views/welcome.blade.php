@@ -23,7 +23,7 @@
             <h1 class="text-orange-500">太子堂保育園ホームページ</h1>
             <form method="GET" action="{{ route('contact.create') }}" class="mt-20 mx-px">
                 <div class="text-right">
-                    <x-button class="mr-8 bg-cyan-300 hover:bg-cyan-400">見学予約フォームはこちら</x-button>
+                    <x-button class="mr-8 bg-cyan-200 hover:bg-cyan-400">見学予約フォームはこちら</x-button>
                 </div> 
             </form>
         </div>
