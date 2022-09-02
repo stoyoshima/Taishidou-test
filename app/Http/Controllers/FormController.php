@@ -25,20 +25,8 @@ class FormController extends Controller
      */
     public function index()
     {
-        //エロクワント書き方でstore保存した内容を表示 
-        //$contacts = Form::all();
-
-        //クエリビルダ書き方でstore保存した内容を表示
-        $contacts = DB::table('forms')
-        ->select('id', 'your_name', 'date', 'time', 'created_at') //表示させるデータ
-        ->orderBy('created_at', 'asc')
-        ->get(); //get()でデータをもってこれる
-
-        // dd($contacts);
-
-        // .の前がフォルダ名で後ろがファイル名、第二引数にクエリビルダで書いた変数をいれる(＄いらない)
-        //viewのindex.blade.phpに表示させる内容を書く
-        return view('contact/index', compact('contacts'));
+        //保育園TOPページ
+        return view('contact/index');
     }
 
     /**
@@ -48,7 +36,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        //
+        //予約フォーム
         return view('contact.create');
     }
 
@@ -62,7 +50,7 @@ class FormController extends Controller
     //バリデーションかける(送信した後の内容を確かめるからstore)
     public function store(StoreContactForm $request)
     {
-        //Moddelをインスタンス化して使えるようにする
+        //Modelをインスタンス化して使えるようにする
         //この中にそれぞれ保存していく
         $contact = new Form;
 
@@ -117,6 +105,7 @@ class FormController extends Controller
         $query->orderBy('created_at', 'asc');
         $contacts = $query->paginate(10);
 
+        //ページネーションのみ表示
         // $contacts = DB::table('forms')
         // ->paginate(10);
 
