@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <!-- css読み込み -->
-    @vite('resources/css/app.css')
+    <!-- @vite('resources/css/app.css') -->
 </head>
 <body>
     <div class="flex justify-around p-10 ">
