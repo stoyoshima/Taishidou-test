@@ -19,13 +19,13 @@
                 <span style="color: #bae9eb">育</span>
                 <span style="color: #fff271">園</span>
             </div>
-            <a href="" class="saiyou">◂採用情報</a>
+            <a href="{{ route('contact.create') }}" class="saiyou">保育園見学予約はこちら</a>
         <div class="header-list">
             <ul class="header-list01">
                 <a href=""><li><img src="/images/icons8-ばら-40.png" alt="">保育園紹介</li></a>
                 <a href=""><li><img src="/images/icons8-ナッツ-40.png" alt="">保育園の一日</li></a>
                 <a href=""><li><img src="/images/icons8-チェリー-40.png" alt="">年間行事</li></a>
-                <a href="{{ route('contact.create') }}"><li><img src="/images/icons8-オークリーフ-40.png" alt="">見学予約フォーム</li></a>
+                <a href=""><li><img src="/images/icons8-オークリーフ-40.png" alt="">お知らせ</li></a>
             </ul>
         </div>
     </div>
@@ -120,7 +120,8 @@
             <a href=""><li>保育園紹介</li></a>
             <a href=""><li>保育園の一日</li></a>
             <a href=""><li>年間行事</li></a>
-            <a href="{{ route('contact.create') }}"><li>保育園見学</li></a>
+            <a href=""><li>お知らせ</li></a>
+            <a href="{{ route('contact.create') }}"><li>保育園見学予約はこちら</li></a>
         </ul>
     </div>
 </div>

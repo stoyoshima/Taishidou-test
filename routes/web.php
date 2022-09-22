@@ -26,15 +26,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
+Route::get('/', [FormController::class, 'index'])->name('contact.index');
+Route::get('contact/create', [FormController::class, 'create'])->name('contact.create');
+Route::post('contact/store', [FormController::class, 'store'])->name('contact.store');
+Route::get('contact/thanks', [FormController::class, 'thanks'])->name('contact.thanks');
 
 
 // prefixでフォルダ指定 middlewareで認証の場合なら表示
 Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
-    Route::get('index', [FormController::class, 'index'])->name('contact.index');
-    Route::get('create', [FormController::class, 'create'])->name('contact.create');
-    Route::post('store', [FormController::class, 'store'])->name('contact.store');
     Route::get('show', [FormController::class, 'show'])->name('contact.show');
-    Route::get('thanks', [FormController::class, 'thanks'])->name('contact.thanks');
 });
 
 

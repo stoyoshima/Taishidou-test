@@ -1,6 +1,5 @@
-<x-app-layout>
-    <x-slot name="header">
-        <div class="flex justify-between">
+<x-guest-layout>
+        <div class="flex justify-around p-10 ">
             <div>
                 <form method="GET" action="{{ route('contact.index') }}">
                     <x-button class="bg-pink-300 hover:bg-pink-400">
@@ -16,8 +15,6 @@
                 </form>
             </div>
         </div>
-    </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -126,4 +123,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-guest-layout>
