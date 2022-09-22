@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- css読み込み -->
-    @vite('resources/css/app.css')
-</head>
-<body>
-    <div class="flex justify-around p-10 ">
-        <div>
+<x-guest-layout>
+        <div class="flex justify-around p-10 ">
+            <div>
                 <form method="GET" action="{{ route('contact.index') }}">
                     <x-button class="bg-pink-300 hover:bg-pink-400">
                         TOPページ戻る
@@ -87,8 +76,8 @@
                                         </div>
                                         <div class="w-80 my-auto">
                                             <select name="time" class="py-4 m-1 rounded-md w-60 border-2 border-red-200 text-slate-500">
-                                                <option value="">選択してください</option>
-                                                <option value="10:00~11:00">10:00~11:00</option>
+                                            <option value="">選択してください</option>
+                                            <option value="10:00~11:00">10:00~11:00</option>
                                             <option value="15:00~16:00">15:00~16:00</option>
                                             </select>
                                         </div>
@@ -134,5 +123,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+</x-guest-layout>
