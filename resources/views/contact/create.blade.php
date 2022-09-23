@@ -1,4 +1,3 @@
-@extends('layouts.guest')
 <x-guest-layout>
         <div class="flex justify-around p-10 ">
             <div>
