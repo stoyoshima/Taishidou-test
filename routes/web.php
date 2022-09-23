@@ -26,7 +26,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-Route::get('/', [FormController::class, 'index'])->name('contact.index');
+// Route::get('/', [FormController::class, 'index'])->name('contact.index');
 Route::get('contact/create', [FormController::class, 'create'])->name('contact.create');
 Route::post('contact/store', [FormController::class, 'store'])->name('contact.store');
 Route::get('contact/thanks', [FormController::class, 'thanks'])->name('contact.thanks');
